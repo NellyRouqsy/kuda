@@ -4,8 +4,8 @@ import Header from "./static/header";
 import Personal from "./pages/personal"
 import Footer from "./static/footer";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import Business from "./pages/Business";
-import Companies from "./pages/Companies";
+import Business from "./pages/business";
+import Companies from "./pages/companies";
 
 const App = ()=>{
   return(
