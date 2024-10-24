@@ -1,15 +1,24 @@
 // import styled from "styled-components";
 // import { MdAddToHomeScreen } from "react-icons/md"
 import Header from "./static/header";
-import Home from "./pages/home"
+import Personal from "./pages/personal"
 import Footer from "./static/footer";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Business from "./pages/Business";
+import Companies from "./pages/Companies";
 
 const App = ()=>{
   return(
     <div>
-      <Header/>
-      <Home/>
-      <Footer/>
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Personal/>}/>
+          <Route path="/business" element={<Business/>}/>
+          <Route path="/companies" element={<Companies/>}/>
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </div>
   );
 };

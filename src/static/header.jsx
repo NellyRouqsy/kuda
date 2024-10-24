@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HeaderLogo from '../assets/kuda-icon.png'
 import NigIcon from '../assets/nigeria.png'
 import { IoReorderTwoOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 
 const Header = ()=>{
@@ -13,18 +14,24 @@ const Header = ()=>{
                     <img src={HeaderLogo} alt="" />
                 </Logo>
                 <Navigations>
+                    <Link to="/">
                     <nav>
                         <span>Personal</span>
                         <MdOutlineArrowDropDown size={20}/>
                     </nav>
+                    </Link>
+                    <Link to="/business">
                     <nav>
                         <span>Business</span>
                         <MdOutlineArrowDropDown size={20}/>
                     </nav>
+                    </Link>
+                    <Link to="/companies">
                     <nav>
                         <span>Company</span>
                         <MdOutlineArrowDropDown size={20}/>
                     </nav>
+                    </Link>
                     <nav>
                         <span>Help</span>
                         <MdOutlineArrowDropDown size={20}/>
@@ -79,14 +86,14 @@ nav{
         font-weight: 600;
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     display: none;
 }
 `
 const Buttons = styled.div`
 display: flex;
 align-items: center;
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     margin-right: 30px;
 }
 `
@@ -97,7 +104,7 @@ border: none;
 outline: none;
 font-weight: 600;
 color: rgb(106,76,141);
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     display: none;
 }
 `
@@ -119,7 +126,7 @@ transition-timing-function: ease;
 &:hover{
   transform: translateY(-5px);
 };
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     display: none;
 }
 `
@@ -144,7 +151,7 @@ display: none;
 font-size: 30px;
 margin-left: -30px;
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     display: flex;
     align-items: center;
     cursor: pointer;
